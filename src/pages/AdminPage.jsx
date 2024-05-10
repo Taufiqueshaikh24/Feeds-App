@@ -15,22 +15,33 @@ export default function AdminPage(){
 
       return(
         <>
+
           
-           { Admin && Admin?.length !== 0  || Admin?.length === null || Admin === undefined ?  (
+           
+            { Admin && Admin?.length !== 0  || Admin?.length === null || Admin === undefined ?  (
              <>
          {Admin && Admin.map((feed) => {
            return <AdminFeedCard key={feed.id} data={feed} />
           })}
         </>
-        ) : (
-          <>
-          
-               <div className="notfound">
+        ) :     (<>
+                 
+                  <div className="notfound">
 
-            <h1 className="requests">No Request  Yet !</h1>
-               </div>
-           </>
-        )}
+                      <h1 className="requests">No Request  Yet !</h1>
+                        </div>
+                 
+                 </>)    }
+                
+               
+                
+              
+          
+          
+           
+           
+          
+          
         </>
       )
 }

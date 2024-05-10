@@ -4,6 +4,8 @@ import { toast } from "react-toastify";
 export default function AdminFeedCard({data}){
      
         const user  = JSON.parse(localStorage.getItem('userInfo'));
+        const currentUser  = JSON.parse(localStorage.getItem('currentUser'));
+        
         let userId ;
         let getUser = user?.filter((e) => {
                    userId = e.id 
@@ -78,8 +80,12 @@ export default function AdminFeedCard({data}){
        
 
      return (
+           
         <>
-            <div className="card">
+           { currentUser &&  currentUser[0][0]?.roles === 'admin' || currentUser === null || currentUser === undefined ? (<>
+            
+           
+                <div className="card">
             <div className="info">
               <h2 className="para2">{data.feed}</h2>
               <p className="para3">Date:{data.Date}</p>
@@ -88,6 +94,17 @@ export default function AdminFeedCard({data}){
               <button className="btn3" onClick={handleApprove}  >Approve</button>
             </div>
          </div>
+           
+           </> ): (<>
+               
+            <div className="notfound">
+
+            <h1>You are Not Authorized</h1> 
+            </div>
+           
+           </>)}
+
+            
         </>      
      )
 }
