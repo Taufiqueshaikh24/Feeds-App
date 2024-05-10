@@ -94,6 +94,7 @@ export default function Register(){
                  id="username" 
                  name="username"
                  placeholder="Enter your Username"
+                 required
                  value={fields.username}
                  onChange={handleChange} />
             </div>
@@ -103,6 +104,7 @@ export default function Register(){
                 id="password"
                 name="password" 
                 placeholder="Enter your Password"
+                required
                 value={fields.password}
                 onChange={handleChange} />
             </div>
@@ -112,6 +114,7 @@ export default function Register(){
                  id="email" 
                  name="email" 
                  placeholder="Enter your Email"
+                 required
                  value={fields.email}
                  onChange={handleChange} />
             </div>
@@ -122,6 +125,7 @@ export default function Register(){
                 id="phone" 
                 name="phoneno" 
                 placeholder="Enter your Phone no" 
+                required
                 value={fields.phoneno}
                 onChange={handleChange} />
             </div>
@@ -137,7 +141,6 @@ export default function Register(){
                 onChange={handleChange}
                 >
                 <option value="user">User</option>
-                <option value="admin">Admin</option>
               </select>
             </div>
 

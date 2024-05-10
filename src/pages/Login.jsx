@@ -92,6 +92,7 @@ export default function Login(){
                 <input type="text" 
                 id="username" 
                 name="username"
+                required
                 placeholder="Enter your Name" 
                 value={fields.username}
                 onChange={handleChange}
@@ -104,8 +105,8 @@ export default function Login(){
                 name="password"
                 placeholder="Enter your Password" 
                 value={fields.password}
+                required
                 onChange={handleChange}/>
-              
             </div>
             <button type="submit" className="btn">Login</button>
             {/* <p className="para">Don't have an Account ? <Link to='/register'>Register</Link></p> */}

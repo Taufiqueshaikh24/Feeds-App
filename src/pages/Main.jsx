@@ -25,8 +25,11 @@ export default function Main(){
     return ( 
         <>
            { feeds2 && feeds2?.length && feeds2?.length === 0 || feeds2 === null || feeds2 === undefined  ? (
-               <>
+               <>   
+                        <div className="notfound">
                       <h1>No Feeds Yet!</h1>
+
+                        </div>
                </>
            ) : (
               <>
