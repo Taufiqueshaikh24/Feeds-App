@@ -20,11 +20,11 @@ export default function Main(){
        feeds2?.forEach((f) =>{
         return f.userid !== user.id
  })  
-        console.log("Feeds2 Length ", feeds2.length)
+        // console.log("Feeds2 Length ", feeds2.length)
 
     return ( 
         <>
-           { feeds2 && feeds2?.length === 0 || feeds2 === null || feeds2 === undefined  ? (
+           { feeds2 && feeds2?.length && feeds2?.length === 0 || feeds2 === null || feeds2 === undefined  ? (
                <>
                       <h1>No Feeds Yet!</h1>
                </>
